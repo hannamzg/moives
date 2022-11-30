@@ -1,38 +1,91 @@
-.App {
+body{
+  background-color: #495057 !important;
+  color: white !important;
+}
+
+.movie-app > .row {
+	overflow-x: auto ;
+	flex-wrap: nowrap;
+}
+
+
+.image-container{
+  max-width: 200px !important;
+  position: relative;
+  transition: transform 0.2s;
+  margin: 10px !important;
+}
+.images{
+  width: 200px;
+}
+
+.image-container:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.image-container:hover .overlay{
+  opacity: 1;
+}
+
+.overlay{
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom:0 ;
+  font-size: 20px;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+
+
+
+/* Track */
+::-webkit-scrollbar {
+  height: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px black; 
+  
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #c95656; 
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  
+  background: #c95656; 
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  ::-webkit-scrollbar {
+    height: 0px !important;              
+    width: 0px !important;              
+    border: 1px solid transparent !important;
+  } 
+  
 }
