@@ -5,6 +5,7 @@ body{
 
 .movie-app > .row {
 	overflow-x: auto ;
+  overflow-y: hidden;
 	flex-wrap: nowrap;
 }
 
@@ -40,11 +41,43 @@ body{
   text-align: center;
 }
 
+footer{
+  background-color: #495057 !important;
+  color: white !important;
+}
 
+.activeStyle{
+  background: linear-gradient(110deg, #3a0ca3 , #0077b6 );
+  color: black !important;
+  font-size: 16px !important;
+  border-radius: 10px;
+  padding: 15px !important;
+  margin: 20px;
+  transition: all 1s ease-in-out !important;
+  color: white !important;
+}
 
+.dropdown-item{
+  display: flex !important;
+  padding: 10px !important;
+  align-items: center !important;
+  background-color: #101010 !important;
+  width: 100% !important;
+  height: 30px !important;
+  margin-block-start: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
 
+#MoviesTitels{
+  font-size:15px !important;
+   color:white !important;
+}
 
-
+a:link{
+  text-decoration: none;
+}
 
 /* Track */
 ::-webkit-scrollbar {
@@ -87,5 +120,19 @@ body{
     width: 0px !important;              
     border: 1px solid transparent !important;
   } 
+  
+  .dropdown-item{
+    display: flex !important;
+    padding: 10px !important;
+    align-items: center !important;
+    background-color: #101010 !important;
+    width: 100% !important;
+    height: 25px !important;
+    margin-block-start: 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+  }
   
 }
