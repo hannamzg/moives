@@ -18,13 +18,14 @@ function MainPage() {
     const [MooviePage,setMoviePage]=useState([]);
 
   
-    const getMoviesRequset = async()=>{
+    const getMoviesRequest = async()=>{
       const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=cfaf86ed`;
       const response = await fetch(url);
       const responsJson = await response.json();
       if (responsJson.Search) {
         setMovies(responsJson.Search)
       }
+   
       
     }
       const AddsetMoviePage = (movie) =>{
@@ -32,8 +33,8 @@ function MainPage() {
       }   
 
     useEffect(()=>{
-      getMoviesRequset(searchValue)
-    },[searchValue])
+      getMoviesRequest(searchValue);
+    },)
   
     useEffect(() => {
           const movieFavourites = JSON.parse(

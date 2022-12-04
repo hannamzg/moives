@@ -10,7 +10,7 @@ function SearchBox(props) {
             </div>
 
             <ul style={{display:"flex",justifyContent:"start",flexDirection:"column",width:"100%"}}>
-                {props.movies.map((movie,index)=>( props.searchValue && <NavLink to="/MoviePage"> <li className="dropdown-item" key={index} style={{color:"white"}} onClick={()=> props.AddsetMoviePage(movie)}>{movie.Title}</li></NavLink>))}
+                {props.movies.map((movie,index)=>( props.searchValue && <NavLink to="/MoviePage" key={index}> <li className="dropdown-item" key={index} style={{color:"white"}} onClick={()=> props.AddsetMoviePage(movie)}>{movie.Title}</li></NavLink>))}
             </ul>
 
         </div>
